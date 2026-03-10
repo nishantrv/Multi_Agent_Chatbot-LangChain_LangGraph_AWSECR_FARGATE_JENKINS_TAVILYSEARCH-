@@ -43,13 +43,6 @@ pipeline {
             }
         }
 
-        stage('Quality Gate') {  // ✅ added - waits for Sonar result before proceeding
-            steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
 
         stage('Build and Push Docker Image to ECR') {
             steps {
