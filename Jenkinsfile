@@ -79,8 +79,8 @@ pipeline {
                     script {
                         sh """
                         aws ecs update-service \
-                          --cluster alert-dolphin-42qg6s \
-                          --service multi-ai-agent-def-010-service-g9kb2f7c \
+                          --cluster able-bird-emufac \
+                          --service multi-ai-agent-101-service-czlo7vxp \
                           --force-new-deployment \
                           --region ${AWS_REGION}
                         """
